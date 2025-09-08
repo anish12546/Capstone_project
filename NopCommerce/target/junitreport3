@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="131.392" tests="11" skipped="0" failures="1" errors="0" timestamp="2025-09-06T09:01:28.227777500Z">
+<testcase classname="Check user is able to register with valid credentials" name="Successful registration of a new account" time="12.917">
+<system-out><![CDATA[
+Given Register page should be open in default browser.......................passed
+When click on the Register button...........................................passed
+And enter valid First Name..................................................passed
+And enter valid Last Name...................................................passed
+And enter valid Email.......................................................passed
+And enter valid Password....................................................passed
+And confirm the Password....................................................passed
+Then account should be created successfully.................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Check user is able to login with valid credentials" name="Successful login with valid username and password" time="8.631">
+<system-out><![CDATA[
+Given Login page should be open in default browser..........................passed
+When user enters valid Email address........................................passed
+And user enters valid Password..............................................passed
+And user clicks on the Login button.........................................passed
+Then user should be logged in and redirected to the homepage................passed
+]]></system-out>
+</testcase>
+<testcase classname="Check user is able to add product to wishlist" name="Successful add and remove product from wishlist" time="21.696">
+<failure type="org.openqa.selenium.NoSuchElementException" message="no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;button[class=&quot;remove-btn&quot;]&quot;}
+  (Session info: chrome=139.0.7258.155)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.34.0', revision: '2a4c61c498'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4d29b40368c9db6a838064a1dfa6c283, findElement {using=css selector, value=button[class=&quot;remove-btn&quot;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.155, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: C:\Users\User\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51662}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51662/devtoo..., se:cdpVersion: 139.0.7258.155, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4d29b40368c9db6a838064a1dfa6c283">
+<![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"button[class="remove-btn"]"}
+  (Session info: chrome=139.0.7258.155)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.34.0', revision: '2a4c61c498'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4d29b40368c9db6a838064a1dfa6c283, findElement {using=css selector, value=button[class="remove-btn"]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.155, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: C:\Users\User\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51662}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51662/devtoo..., se:cdpVersion: 139.0.7258.155, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4d29b40368c9db6a838064a1dfa6c283
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
+	at nopcommerce.pageclass.remove_w_in(pageclass.java:235)
+	at nopcommerce.wishlist.user_clicks_on_wishlist_remove_button(wishlist.java:41)
+	at ✽.user clicks on wishlist Remove button(file:///C:/Users/User/eclipse-workspace/NopCommerce/src/test/resources/features/03wishlist.feature:7)
+]]>
+</failure>
+<system-out><![CDATA[
+Given user is on the product page in default browsers.......................passed
+When user clicks on Add to wishlist button..................................passed
+And user clicks on Wishlist button..........................................passed
+When user clicks on wishlist Remove button..................................failed
+Then product should be added and removed from the wishlist..................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Check the user is able to search for product" name="Successful search of an product - #1.1" time="8.654">
+<system-out><![CDATA[
+Given search page is open in browser........................................passed
+When user clicks on the search bar..........................................passed
+And enters the product Asus laptop..........................................passed
+Then search results for product should be displayed.........................passed
+]]></system-out>
+</testcase>
+<testcase classname="Check the user is able to search for product" name="Successful search of an product - #1.2" time="8.687">
+<system-out><![CDATA[
+Given search page is open in browser........................................passed
+When user clicks on the search bar..........................................passed
+And enters the product mobile...............................................passed
+Then search results for product should be displayed.........................passed
+]]></system-out>
+</testcase>
+<testcase classname="Check the user is able to search for product" name="Successful search of an product - #1.3" time="9.468">
+<system-out><![CDATA[
+Given search page is open in browser........................................passed
+When user clicks on the search bar..........................................passed
+And enters the product shoes................................................passed
+Then search results for product should be displayed.........................passed
+]]></system-out>
+</testcase>
+<testcase classname="Check user is able to add product to cart" name="Successful add and remove product from cart" time="16.221">
+<system-out><![CDATA[
+Given user is on the product page in default browser........................passed
+When user clicks on Add to cart button......................................passed
+And user clicks on Shopping cart button.....................................passed
+When user clicks on Remove button...........................................passed
+Then product should be add and removed from the cart........................passed
+]]></system-out>
+</testcase>
+<testcase classname="Compare two products" name="User compares two products successfully" time="13.711">
+<system-out><![CDATA[
+Given User is on the nopCommerce homepage...................................passed
+When User clicks on the Compare button for the first product................passed
+And User clicks on the Compare button for the second product................passed
+And User navigates to the product comparison page...........................passed
+Then Both selected products should be displayed in the comparison list......passed
+]]></system-out>
+</testcase>
+<testcase classname="Add new address in nopCommerce account" name="User adds a new address successfully" time="11.325">
+<system-out><![CDATA[
+Given User is logged into their nopCommerce accounts........................passed
+When User navigates to the My account sections..............................passed
+And User clicks on the Addresses............................................passed
+And User clicks on Add new to add a new address.............................passed
+And User enters valid new address detail....................................passed
+And User saves the addresss.................................................passed
+Then The new address should be added successfully...........................passed
+]]></system-out>
+</testcase>
+<testcase classname="Change user address in nopCommerce account" name="User updates their address successfully" time="12.471">
+<system-out><![CDATA[
+Given User is logged into their nopCommerce account.........................passed
+When User navigates to the My account section...............................passed
+And User clicks on the Addresses option.....................................passed
+And User clicks on Add new or Edit to update an address.....................passed
+And User enters valid address details.......................................passed
+And User saves the address..................................................passed
+Then The address should be updated successfully.............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Check user is able to change currency on the homepage" name="Successful change of currency" time="7.34">
+<system-out><![CDATA[
+Given Homepage should be open in default browser............................passed
+When user selects Euro from the currency dropdown...........................passed
+Then all product prices should be displayed in €............................passed
+]]></system-out>
+</testcase>
+</testsuite>
