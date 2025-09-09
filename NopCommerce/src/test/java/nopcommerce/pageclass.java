@@ -86,57 +86,43 @@ public class pageclass {
 	}
 	
 	
-	
-
-	
 	public void register_in() {
 		
 		driver.findElement(register).click();
 	}
 	
-	public void fname_in() {
+	public void fname_in(String firstname) {
 		driver.findElement(gender).click();
-		WebElement firstname=driver.findElement(fname);
-		firstname.click();
-		firstname.sendKeys("anish");
-		firstname.sendKeys(Keys.ENTER);
+		driver.findElement(fname).click();
+		driver.findElement(fname).sendKeys(firstname);
+
 	}
 	
-	public void lname_in() {
+	public void lname_in(String lastname) {
+		driver.findElement(lname).click();
+		driver.findElement(lname).sendKeys(lastname);
 		
-		//lastname
-		WebElement lastname=driver.findElement(lname);
-		lastname.click();
-		lastname.sendKeys("jadhav");
-		lastname.sendKeys(Keys.ENTER);
 	}
 	
-	public void email_in() {
-		
-		//email
-		WebElement email=driver.findElement(mail);
-		email.clear();
-		email.sendKeys("jadhavanish415@gmail.com");
-		email.sendKeys(Keys.ENTER);
+	public void email_in(String email) {
+		driver.findElement(mail).click();
+		driver.findElement(mail).sendKeys(email);
+
 	}
 	
-	public void password_in() {
+	public void password_in(String Password) {
 		
+		driver.findElement(password).click();
+		driver.findElement(password).sendKeys(Password);
 		
-		//password
-		WebElement pass=driver.findElement(password);
-		pass.clear();
-		pass.sendKeys("12102002@Aa");
-		pass.sendKeys(Keys.ENTER);
+
 	}
 	
-	public void confirmpassword_in() {
+	public void confirmpassword_in(String Cpassword) {
+		driver.findElement(cpassword).click();
+		driver.findElement(cpassword).sendKeys(Cpassword);
 		
-		//confirm
-		WebElement cpass=driver.findElement(cpassword);
-		cpass.clear();
-		cpass.sendKeys("12102002@Aa");
-		//cpass.sendKeys(Keys.ENTER);
+
 	}
 		
 	public void register_button() throws InterruptedException {
@@ -146,6 +132,8 @@ public class pageclass {
 		 driver.findElement(cont).click();
 		
 	}
+	
+	
 	
 	//login
 	public void emai_in() {
