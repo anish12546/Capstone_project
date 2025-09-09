@@ -30,34 +30,35 @@ public void click_on_the_register_button() {
     
 }
 
-@When("enter valid First Name")
-public void enter_valid_first_name() {
+
+@When("^enter valid First Name(.*)$")
+public void enter_valid_first_name(String firstname) {
 	pc=new pageclass(driver);
-	pc.fname_in();
+	pc.fname_in(firstname);
 }
 
-@When("enter valid Last Name")
-public void enter_valid_last_name() {
+@When("^enter valid Last Name(.*)$")
+public void enter_valid_last_name(String lastname) {
 	pc=new pageclass(driver);
-	pc.lname_in();
+	pc.lname_in(lastname);
 }
 
-@When("enter valid Email")
-public void enter_valid_email() {
+@When("^enter valid Email(.*)$")
+public void enter_valid_email(String email) {
 	pc=new pageclass(driver);
-	pc.email_in();
+	pc.email_in(email);
 }
 
-@When("enter valid Password")
-public void enter_valid_password() {
+@When("^enter valid Password(.*)$")
+public void enter_valid_password(String password) {
 	pc=new pageclass(driver);
-	pc.password_in();
+	pc.password_in(password);
 }
 
-@When("confirm the Password")
-public void confirm_the_password() throws InterruptedException {
+@When("^confirm the Password(.*)$")
+public void confirm_the_password(String cpassword) throws InterruptedException {
 	pc=new pageclass(driver);
-	pc.confirmpassword_in();
+	pc.confirmpassword_in( cpassword);
 	pc.register_button();
 }
 
